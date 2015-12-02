@@ -3,12 +3,15 @@ defmodule NervesLab.Job do
 
   schema "jobs" do
     field :agent_id, :integer
+    field :clone_url, :string
+    field :commit_hash, :string
+    field :ref, :string
 
     timestamps
   end
 
-  @required_fields ~w(agent_id)
-  @optional_fields ~w()
+  @required_fields ~w(clone_url commit_hash ref)
+  @optional_fields ~w(agent_id)
 
   @doc """
   Creates a changeset based on the `model` and `params`.
