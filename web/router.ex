@@ -29,5 +29,7 @@ defmodule NervesLab.Router do
     resources "/jobs", JobController, except: [:new, :edit]
 
     post "/webhooks/github", GithubWebhookController, :handle
+
+    get "/work", WorkController, :give_job
   end
 end
