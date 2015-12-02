@@ -1,0 +1,13 @@
+<h2>Show agent</h2>
+
+<ul>
+
+  <li>
+    <strong>Token:</strong>
+    <%= @agent.token %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: agent_path(@conn, :edit, @agent) %>
+<%= link "Back", to: agent_path(@conn, :index) %>

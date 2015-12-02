@@ -1,0 +1,26 @@
+<h2>Listing agents</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Token</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for agent <- @agents do %>
+    <tr>
+      <td><%= agent.token %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: agent_path(@conn, :show, agent), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: agent_path(@conn, :edit, agent), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: agent_path(@conn, :delete, agent), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New agent", to: agent_path(@conn, :new) %>

@@ -1,0 +1,6 @@
+<h2>New agent</h2>
+
+<%= render "form.html", changeset: @changeset,
+                        action: agent_path(@conn, :create) %>
+
+<%= link "Back", to: agent_path(@conn, :index) %>

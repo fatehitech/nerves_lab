@@ -1,0 +1,6 @@
+<h2>Edit agent</h2>
+
+<%= render "form.html", changeset: @changeset,
+                        action: agent_path(@conn, :update, @agent) %>
+
+<%= link "Back", to: agent_path(@conn, :index) %>
