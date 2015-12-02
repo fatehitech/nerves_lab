@@ -10,8 +10,7 @@ defmodule NervesLab.GithubWebhookController do
       commit_hash: params["head_commit"]["id"],
       ref: params["ref"]
     })
-    job
-    IO.inspect Repo.insert!(job)
+    Repo.insert!(job)
     send_resp(conn, 201, "")
   end
 end
