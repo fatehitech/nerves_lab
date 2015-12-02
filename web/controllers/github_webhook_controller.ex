@@ -5,6 +5,6 @@ defmodule NervesLab.GithubWebhookController do
 
   def handle(conn, params) do
     IO.inspect params
-    send_resp(201, "")
+    send_resp(conn, 201, "")
   end
 end
