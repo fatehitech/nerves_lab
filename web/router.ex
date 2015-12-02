@@ -27,5 +27,7 @@ defmodule NervesLab.Router do
     pipe_through :api
 
     resources "/jobs", JobController, except: [:new, :edit]
+
+    post "/webhooks/github", GithubWebhookController, :handle
   end
 end
