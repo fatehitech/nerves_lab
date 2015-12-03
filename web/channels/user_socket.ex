@@ -2,11 +2,11 @@ defmodule NervesLab.UserSocket do
   use Phoenix.Socket
 
   ## Channels
-  # channel "rooms:*", NervesLab.RoomChannel
+  channel "rooms:*", NervesLab.RoomChannel
 
   ## Transports
   transport :websocket, Phoenix.Transports.WebSocket
-  # transport :longpoll, Phoenix.Transports.LongPoll
+   transport :longpoll, Phoenix.Transports.LongPoll
 
   # Socket params are passed from the client and can
   # be used to verify and authenticate a user. After
@@ -20,6 +20,7 @@ defmodule NervesLab.UserSocket do
   # See `Phoenix.Token` documentation for examples in
   # performing token verification on connect.
   def connect(_params, socket) do
+    IO.puts "accept socket"
     {:ok, socket}
   end
 

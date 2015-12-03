@@ -8,5 +8,8 @@ defmodule NervesLab.WorkController do
     # Are you eligible for this task?
     # If so, I assign it to you
     # And I return the job to you
+
+    # nevermind this is polling
+    # lets use channels!
   end
 end
